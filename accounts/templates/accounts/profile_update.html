@@ -1,0 +1,16 @@
+{% extends 'main/form.html' %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="mt-5">
+      <div class="card col-3">
+        <div class="card-header">
+          <h3 class="card-title fw-light">{{ title }}</h3>
+        </div>
+        <div class="card-body">
+          {{ block.super }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'main/form.html' %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="mt-5">
+      <div class="card col-md-6 col-xl-4">
+        <div class="card-header">
+          <h3 class="card-title fw-light">{{ title }}</h3>
+           <h6 class="card-subtitle mb-2 text-muted">{{ user }}</h6>
+        </div>
+        <div class="card-body">
+          <p class="small">You are about to delete your account, all data will be deleted.</p>
+          {{ block.super }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block submit %}
+  <div class="row">
+    <div class="col"><input class="btn btn-danger btn-block" type="submit" value="{{ title }}"></div>
+    <div class="col"><a href="{% url 'accounts:profile' %}" class="btn btn-primary btn-block">Cancel</a></div>
+  </div>
+{% endblock %}

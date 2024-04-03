@@ -1,0 +1,24 @@
+{% extends 'main/form.html' %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+      <div class="card col-3">
+        <div class="card-header">
+          <h3 class="card-title fw-light">{{ title }}</h3>
+        </div>
+        <div class="card-body">
+          {{ block.super }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block submit %}
+  {{ block.super }}
+  <div class="row mt-3">
+    <div class="col"><a class="btn btn-outline-primary btn-block" href="{% url 'accounts:signup' %}">Sign Up</a></div>
+    <div class="col"><a class="btn btn-outline-primary btn-block" href="{% url 'accounts:reset_password' %}">Forgot Password</a></div>
+  </div>
+{% endblock %}
