@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'template_partials',
     'widget_tweaks',
+    'appointments.apps.AppointmentsConfig',
 ]
 
 MIDDLEWARE = [

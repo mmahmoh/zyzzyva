@@ -12,13 +12,16 @@ class User(BaseUser):
     first_name = models.CharField(
         verbose_name=_('First Name'),
         max_length=30,
+        blank=True,
     )
     last_name = models.CharField(
         verbose_name=_('Last Name'),
         max_length=30,
+        blank=True,
     )
     phone = PhoneNumberField(
         verbose_name=_('phone'),
+        blank=True,
     )
     objects = BaseUserManager()
 
